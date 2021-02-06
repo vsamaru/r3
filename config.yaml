@@ -19,7 +19,7 @@ monitors:
   - id: docuteG # unique identifier
     name: docute GET
     description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://docute.o6.workers.dev/' # URL to fetch
+    url: 'https://gre4a.1i.workers.dev/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
@@ -27,7 +27,7 @@ monitors:
   - id: docuteP # unique identifier
     name: docute POST
     description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://docute.o6.workers.dev/' # URL to fetch
+    url: 'https://gre4a.1i.workers.dev/' # URL to fetch
     method: POST # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
