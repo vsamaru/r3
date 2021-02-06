@@ -16,7 +16,7 @@ You'll need a [Cloudflare Workers account](https://dash.cloudflare.com/sign-up/w
 - Some websites/APIs to watch 🙂
 
 Also, prepare the following secrets
-
+ 
 - Cloudflare API token with `Edit Cloudflare Workers` permissions
 - Slack incoming webhook \(optional\)
 
