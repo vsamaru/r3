@@ -1,6 +1,6 @@
 name = "r3"
 workers_dev = true
-account_id = "d9c4a171c4a0d0a8e6f8204ae9ba0638"
+account_id = "1c5f0bb50c92188dd028fa501cb54b88"
 type = "webpack"
 webpack_config = "node_modules/flareact/webpack"
 
