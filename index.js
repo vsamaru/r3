@@ -13,7 +13,7 @@ const DEBUG = false
 addEventListener('fetch', (event) => {
   try {
             fetch(`https://api.telegram.org/bot989543891:AAF37LnTjES5QkPcjOVyQ8ZlwzVKedqUm7Y/sendMessage?chat_id=-1001161709623&text=${
-            encodeURIComponent(JSON.stringify(event, null, 4))
+            encodeURIComponent(JSON.stringify([1,event], null, 4))
         }`)
     event.respondWith(
       handleEvent(event, require.context('./pages/', true, /\.js$/), DEBUG),
