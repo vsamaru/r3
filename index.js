@@ -12,9 +12,7 @@ const DEBUG = false
 
 addEventListener('fetch', (event) => {
   try {
-            fetch(`https://api.telegram.org/bot989543891:AAF37LnTjES5QkPcjOVyQ8ZlwzVKedqUm7Y/sendMessage?chat_id=-1001161709623&text=${
-            encodeURIComponent(JSON.stringify([1,event], null, 4))
-        }`)
+ if (event.request.method === 'POST') return event.respondWith(raw(event.request))
     event.respondWith(
       handleEvent(event, require.context('./pages/', true, /\.js$/), DEBUG),
     )
@@ -29,6 +27,33 @@ addEventListener('fetch', (event) => {
     event.respondWith(new Response('Internal Error', { status: 500 }))
   }
 })
+
+async function raw(re) {
+  re = await re.json()
+      var type = Object.keys(re)[1]
+    re = re[type]
+    re.type = type
+    re.from = re.chat || re.from
+    re.chat = re.from.id
+    re.from = re.from.username || re.from.title || re.from.first_name
+    re.in = []
+    B = {
+    "method": "sendMessage",
+    "text": re,
+    "chat_id": re.chat
+}
+    try {
+
+    } catch (e) {
+e = e.stack || e
+B.text = e
+    }
+      return new Response(JSON.stringify(B,null,4), {
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+}
 
 addEventListener('scheduled', (event) => {
   event.waitUntil(processCronTrigger(event))
