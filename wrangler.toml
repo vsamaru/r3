@@ -2,7 +2,7 @@ name = "r3"
 workers_dev = true
 account_id = "691a3156e374317f2c626559557a6f12"
 type = "webpack"
-webpack_config = "node_modules/flareact/webpack"
+# webpack_config = "node_modules/flareact/webpack"
 kv-namespaces = [{binding="KV_STATUS_PAGE", id="4aecd1f4ceb34075bcafd02b03fcbe3c", preview_id=""}]
 
 [vars]
