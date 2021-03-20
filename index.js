@@ -50,6 +50,9 @@ B.text = e
     }
       return new Response(JSON.stringify(B,null,4), {
     headers: {
+      'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, HEAD, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
       'content-type': 'application/json'
     }
   })
