@@ -5,6 +5,10 @@ type = "webpack"
 webpack_config = "node_modules/flareact/webpack"
 kv-namespaces = [{binding="KV_STATUS_PAGE", id="4aecd1f4ceb34075bcafd02b03fcbe3c", preview_id=""}]
 
+[vars]
+B=''
+TOKEN="929777422:AAEim6p-WwZwv_w7pBx5_P50o3lKEWTj75s"
+
 [triggers]
 crons = ["* * * * *"]
 
